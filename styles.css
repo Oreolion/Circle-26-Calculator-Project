@@ -7,13 +7,118 @@
   padding: 0;
   box-sizing: border-box;
 }
-
-/* body {
+body {
   font-family: sans-serif;
-  background-image: linear-gradient( to bottom right, lightblue, blue);
+  background-color: #141414;
+  margin: 0 auto;
+  height: 100vh;
+}
 
-} */
+/* Center the container div */
+.container {
+  position: absolute;
+  display: grid;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: #ffffff;
+  border-radius: 8px;
+  transform: translate(-50%, -50%);
+  top: 50%;
+  left: 50%;
+  padding: 24px;
+}
 
+/* Style the calculator display */
+.display {
+    background-color: rgb(218, 228, 255);
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    border: none;
+    border-radius: 8px;
+    padding: 8px;
+    font-size: 56px;
+    text-align: right;
+    height: 80px;
+    margin-bottom: 8px;
+}
+
+/* Styling the table */
+tbody {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+tr {
+    display: flex;
+    flex-direction: row;
+    gap: 8px;
+}
+
+/* Style the calculator buttons */
+.buttons {
+  display: grid;
+  flex-direction: column;
+}
+
+/* Style operator buttons */
+
+
+.btn-operator {
+  background-color: #141414;
+  border: none;
+  border-radius: 8px;
+  padding: 16px;
+  font-size: 24px;
+  cursor: pointer;
+  color: #ffffff;
+  width: 72px;
+  height: 72px;
+}
+
+/* Style numeric buttons */
+.btn-number {
+  background-color: #f5f5f5f5;
+  border: none;
+  border-radius: 8px;
+  padding: 16px;
+  font-size: 24px;
+  cursor: pointer;
+  width: 72px;
+  height: 72px;
+}
+
+/* Style equal and operator button */
+.btn-equal, .btn-operator1 {
+  background-color: #ffdba5;
+  border: none;
+  border-radius: 8px;
+  padding: 16px;
+  font-size: 24px;
+  cursor: pointer;
+  width: 72px;
+  height: 72px;
+}
+
+/* Style copyright text */
+p {
+  text-align: center;
+  margin-top: 20px;
+}
+span {
+  font-weight: bold;
+}
+
+/* Independent styling */
+#clear{
+  background-color: rgb(255, 184, 184);
+}
+
+#delete, #percentage{
+  background-color: #ddd;
+  color: forestgreen;
+}
 
 /* utility classes */
 /* .btn-operator {
@@ -52,12 +157,8 @@ p span {
   color: #0a1e23;
 }
 
-.container {
-  height: 100vh;
-  width: 100vw;
-  display: grid;
-  place-items: center;
-}
+
+
 
 .calculator {
   position: relative;

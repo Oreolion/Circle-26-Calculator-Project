@@ -41,61 +41,40 @@ body {
   margin-bottom: 0.5rem;
   color: #acacac;
 }
-
-/* Styling the table */
-tbody {
-  display: flex;
-  flex-direction: column;
-  gap: 0.5rem;
-}
-tr {
-  display: flex;
-  flex-direction: row;
-  gap: 0.5rem;
-}
-
 /* Style the calculator buttons */
-.buttons {
-  display: grid;
-  flex-direction: column;
-}
-
-/* Style operator buttons */
-
-.btn-operator {
+button {
   border: none;
   border-radius: 0.5rem;
-  padding: 1rem;
+  background-color: #f5f5f5;
+  color: #333;
   font-size: 1.5rem;
-  cursor: pointer;
-  color: #ffffff;
+  font-weight: 400;
   width: 4.5rem;
   height: 4.5rem;
+  cursor: pointer;
+}
+td.col-span{
+  width: 100%;
+}
+button#zero{
+  width: 100%;
+}
+button#equal{
+  height: 9.125rem;
 }
 
 /* Style numeric buttons */
 .btn-number {
-  background-color: #f5f5f5;
-  border: none;
-  border-radius: 0.5rem;
   padding: 1rem;
-  font-size: 1.5rem;
-  cursor: pointer;
-  width: 4.5rem;
-  height: 4.5rem;
 }
 
 /* Style equal and operator button */
 .btn-equal,
 .btn-operator1 {
-  background-color: #ffdba5;
-  border: none;
-  border-radius: 0.5rem;
-  padding: 1rem;
-  font-size: 1.5rem;
-  cursor: pointer;
-  width: 4.5rem;
-  height: 4.5rem;
+  background-color: #fff7eb;
+  color: #ffc977;
+  font-size: 32px;
+  font-weight: 500;
 }
 
 /* Style copyright text */
@@ -109,13 +88,16 @@ span {
 
 /* Independent styling */
 #clear {
-  background-color: rgb(255, 184, 184);
+  font-size: 1rem;
+  background-color: rgb(255, 231, 231);
+  color: rgb(255, 88, 88);
 }
 
-#delete,
-#percentage {
-  background-color: #ddd;
+#delete{
+  background-color: rgb(237, 255, 237);
   color: forestgreen;
+  font-size: 32px;
+  font-weight: 500;
 }
 
 /* Creating the mobile responsive screens */
@@ -140,14 +122,12 @@ span {
     align-items: flex-end;
     line-height: 40px;
   }
-  .btn-equal,
-  .btn-operator1,
-  .btn-number,
-  #clear,
-  #delete,
-  #percentage {
+  button {
     width: 20vw;
     padding: 8%;
     height: 5rem;
+  }
+  button#equal{
+    height: 10.125rem;
   }
 }

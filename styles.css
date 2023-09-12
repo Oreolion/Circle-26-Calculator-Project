@@ -6,12 +6,13 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  transition: all 0.3s ease;
 }
 
 body {
   display: flex;
   font-family: sans-serif;
-  background: #141414;
+  background: #eee;
   margin: 0 auto;
   height: 100vh;
   justify-content: center;
@@ -23,132 +24,103 @@ body {
 /* Toggle Container */
 .toggle-container {
   position: fixed;
-  top: -1rem;
-  right: 0;
+  top: 0;
+  left: 0;
   margin: 1rem;
   z-index: 1000;
 
   & .btn {
-      display: flex;
-      margin: 2rem auto;
-      width: 5.5rem;
-      height: 2.4rem;
-      padding: 0.2rem 0.2rem;
-      background: #fff;
-      border-radius: 100px;
-      box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
-      cursor: pointer;
-      position: relative;
-    }
-             /* toggle indicator */
-    & .btn_indicator {
-      background: black;
-      width: 2rem;
-      height: 2rem;
-      box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
-      border-radius: 50%;
-      position: absolute;
-    }
-    
-   & .btn_icon-container {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      width: 100%;
-      height: 100%;
-      transition: transform .9s ease-in-out;
-    }
-    
-   & .btn_icon {
-      font-size: 1em;
-      color: aquamarine;
-    }
+    display: flex;
+    margin: 2rem auto;
+    width: 5.5rem;
+    height: 2.4rem;
+    padding: 0.2rem 0.2rem;
+    background: #fff;
+    border-radius: 6.25rem;
+    box-shadow: rgba(0, 0, 0, 0.25) 0rem 3.375rem 3.4375rem,
+      rgba(0, 0, 0, 0.12) 0rem -0.75rem 1.875rem, rgba(0, 0, 0, 0.12) 0rem .25rem .375rem,
+      rgba(0, 0, 0, 0.17) 0rem .75rem .8125rem, rgba(0, 0, 0, 0.09) 0rem -0.1875rem .3125rem;
+    cursor: pointer;
+    position: relative;
+  }
+  /* toggle indicator */
+  & .btn_indicator {
+    background: #333;
+    width: 2rem;
+    height: 2rem;
+    box-shadow: rgba(0, 0, 0, 0.25) 0rem 3.375rem 3.4375rem,
+      rgba(0, 0, 0, 0.12) 0rem -0.75rem 1.875rem, rgba(0, 0, 0, 0.12) 0rem .25rem .375rem,
+      rgba(0, 0, 0, 0.17) 0rem .75rem .8125rem, rgba(0, 0, 0, 0.09) 0rem -0.1875rem .3125rem;
+    border-radius: 50%;
+    position: absolute;
+  }
 
-   
-    
-  
+  & .btn_icon-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+  }
+
+  & .btn_icon {
+    font-size: 1.5rem;
+    color: khaki;
+  }
 }
-         /* Toggle dark mode  */
-         .darkmode .btn_indicator {
-           transform: translateX(3em);
-           background-color: white;
-         }
-    
-         body.darkmode {
-           background-color: #451952;
-         }
-    
-         .darkmode .btn_icon {
-           color: pink;
-         }
-    
-         .darkmode button {
-           color: #29A8FF;
-           background: linear-gradient(191.34deg, #17181A -4.95%, #17181A 103.74%);
-           box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
-         }
-    
-         .darkmode .container {
-           background: linear-gradient(191.34deg, #17181A -4.95%, #17181A 103.74%);
-         }
-    
-         .darkmode footer {
-           color: gray;
-           font-weight: 500;
-         }
-    button {
-      /* width: 2.5rem; */
-      width: 100%;
-      aspect-ratio: 1;
-      border-radius: 10px;
-      box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
-    }
-  
-    footer {
-      display: flex;
-      justify-content: center;
-      font-size: 12px;
-      margin: 0 auto;
-    }
+/* Toggle dark mode  */
+.darkmode .btn_indicator {
+  transform: translateX(3rem);
+  background-color: white;
+}
 
-/* Theme toggleing */
-.theme-toggle{
-  position: absolute;
-  top: 1rem;
-  left: 1rem;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  height: 2rem;
-  font-size: 16px;
-  border-radius: 1rem;
+.darkmode .btn {
   background-color: #333;
-  color: #f5f5f5;
-  padding: 0.5rem;
-  cursor: pointer;
-  z-index: 1;
 }
 
-.theme-toggle.active{
-  background-color: #f5f5f5;
+.darkmode .btn_icon {
+  font-size: 1.5rem;
   color: #333;
 }
 
-.theme-toggle.active::before{
-  background-color: #fff;  
+body.darkmode {
+  background-color: #1a1a1a;
 }
 
-.theme-toggle::before{
-  content: '';
-  position: absolute;
-  top: 1rem;
-  left: 1rem;
-  width: 1rem;
-  height: 1rem;
-  border-radius: 50%;
-  background-color: #333;
-  transition: all 0.3s ease;
-  z-index: -1;
+.darkmode button {
+  background-color: #1fa2ff11;
+  color: #29a8ff;
+}
+
+.darkmode .container {
+  background: linear-gradient(191.34deg, #17181a -4.95%, #17181a 103.74%);
+}
+
+.darkmode #clear {
+  background-color: rgba(103, 255, 103, 0.068);
+  color: forestgreen;
+}
+
+.darkmode #delete {
+  background-color: rgba(255, 132, 132, 0.11);
+  color: rgb(255, 88, 88);
+}
+
+.darkmode .btn-equal,
+.darkmode .btn-operator1 {
+  background-color: #ffd28e23;
+  color: #ffc977;
+}
+
+.darkmode footer {
+  color: gray;
+}
+
+footer {
+  display: flex;
+  justify-content: center;
+  font-size: .75rem;
+  margin: 0 auto;
 }
 
 /* Center the container div */
@@ -176,46 +148,29 @@ body {
   color: #acacac;
 }
 
-/* Styling the toggle */
-/* .toggle-icon {
-  position: absolute;
-  top: 1rem;
-  left: 1rem;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  height: 2rem;
-  font-size: 16px;
-  border-radius: 1rem;
-  background-color: #333;
-  color: #f5f5f5;
-  padding: 0.5rem;
-  cursor: pointer;
-} */
-
-table{
-  border-spacing: .5rem;
+table {
+  border-spacing: 0.5rem;
 }
 /* Style the calculator buttons */
 button {
   border: none;
   border-radius: 0.5rem;
-  background-color: #f5f5f5;
-  color: #333;
+  background-color: #e9f6ff;
+  color: #29a8ff;
   font-size: 1.5rem;
   font-weight: 400;
   width: 4.5rem;
   height: 4.5rem;
   cursor: pointer;
 }
-td.col-span{
+td.col-span {
   width: 100%;
 }
-button#zero{
+button#zero {
   width: 100%;
 }
-button#equal{
-  height: 9.125rem;
+button#equal {
+  height: 9.5rem;
 }
 
 /* Style numeric buttons */
@@ -228,7 +183,7 @@ button#equal{
 .btn-operator1 {
   background-color: #fff7eb;
   color: #ffc977;
-  font-size: 32px;
+  font-size: 2rem;
   font-weight: 500;
 }
 
@@ -244,15 +199,15 @@ span {
 /* Independent styling */
 #clear {
   font-size: 1rem;
-  background-color: rgb(255, 231, 231);
-  color: rgb(255, 88, 88);
-}
-
-#delete{
   background-color: rgb(237, 255, 237);
   color: forestgreen;
-  font-size: 32px;
+}
+
+#delete {
+  font-size: 2rem;
   font-weight: 500;
+  background-color: rgb(255, 231, 231);
+  color: rgb(255, 88, 88);
 }
 
 /* Creating the mobile responsive screens */
@@ -275,14 +230,14 @@ span {
   .display {
     height: 20vh;
     align-items: flex-end;
-    line-height: 40px;
+    line-height: 2.5rem;
   }
   button {
     width: 20vw;
     padding: 8%;
     height: 5rem;
   }
-  button#equal{
-    height: 10.125rem;
+  button#equal {
+    height: 10.5rem;
   }
 }

@@ -1,96 +1,92 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Calculator</title>
-  <!-- <link
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Calculator</title>
+    <!-- <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
     /> -->
-  <link rel="stylesheet" href="styles.css" />
-</head>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
 
-<body>
-  <!-- AUTHOR YOUR HTML MARKUPS HERE -->
+  <body>
+    <!-- AUTHOR YOUR HTML MARKUPS HERE -->
 
-  <div class="container">
-    <div class="calculator dark">
-      <div class="theme-toggle active"></div>
-
-      <!-- toggle icon -->
-      <div class="toggle-icon"></div>
-
-      <!-- display screen -->
-      <div class="display" id="display">0</div>
-      <div class="buttons">
-        <div>
-          <div></div>
+    <div class="container">
+      <div class="calculator dark">
+        <div class="theme-toggle active">
+          <i class="toggle-icon">	&#9788; Switch to Dark Mode</i>
         </div>
-        <table>
-          <tr>
-            <td>
-              <button class="btn-operator" id="clear">AC</button>
-            </td>
-            <td>
-              <button class="btn-operator" id="delete">
-                DEL
-              </button>
-            </td>
-            <td>
-              <button class="btn-operator" id="percentage">
-                %
-              </button>
-            </td>
 
-            <td><button class="btn-operator1" id="/">/</button></td>
+        <!-- toggle icon -->
+        
 
-          </tr>
+        <!-- display screen -->
+        <div class="display" id="display">
+          <!-- <i class="toggle-icon">	&#9788;</i> -->
+          <div class="placeholder">0</div>
+        </div>
+        <div class="buttons">
+          <div>
+            <div></div>
+          </div>
+          <table>
+            <tr>
+              <td>
+                <button class="btn-operator" id="clear">AC</button>
+              </td>
+              <td>
+                <button class="btn-operator" id="delete">&#9249;</button>
+              </td>
+              <!-- <td>
+                <button class="btn-operator" id="percentage">%</button>
+              </td> -->
+              <td><button class="btn-operator1" id="divide">&divide;</button></td>
+              <td>
+                <button class="btn-operator1" id="multiply">&times;</button>
+              </td>
+            </tr>
 
-          <tr>
-            <td><button class="btn-number" id="7">7</button></td>
-            <td><button class="btn-number" id="8">8</button></td>
-            <td><button class="btn-number" id="9">9</button></td>
-            <td>
-              <button class="btn-operator1" id="*">X</button>
-            </td>
-          </tr>
+            <tr>
+              <td><button class="btn-number" id="7">7</button></td>
+              <td><button class="btn-number" id="8">8</button></td>
+              <td><button class="btn-number" id="9">9</button></td>
+              <td><button class="btn-operator1" id="minus">&minus;</button></td>
+              
+            </tr>
 
-          <tr>
-            <td><button class="btn-number" id="4">4</button></td>
-            <td><button class="btn-number" id="5">5</button></td>
-            <td><button class="btn-number" id="6">6</button></td>
-            <td><button class="btn-operator1" id="-">-</button></td>
-          </tr>
+            <tr>
+              <td><button class="btn-number" id="4">4</button></td>
+              <td><button class="btn-number" id="5">5</button></td>
+              <td><button class="btn-number" id="6">6</button></td>
+              <td>
+                <button class="btn-operator1" id="addition">+</button>
+              </td>
+            </tr>
 
-          <tr>
-            <td><button class="btn-number" id="1">1</button></td>
-            <td><button class="btn-number" id="2">2</button></td>
-            <td><button class="btn-number" id="3">3</button></td>
-            <td>
-              <button class="btn-operator1 row-span" id="addition">+</button>
-            </td>
-          </tr>
+            <tr>
+              <td><button class="btn-number" id="1">1</button></td>
+              <td><button class="btn-number" id="2">2</button></td>
+              <td><button class="btn-number" id="3">3</button></td>
+              <td class="row-span" rowspan="2">
+                <button class="btn-equal" id="equal">&equals;</button>
+              </td>
+              
+            </tr>
 
-          <tr>
-            <td>
-              <button class="btn-number col-span" id="0">00</button>
-            </td>
-            <td>
-              <button class="btn-number col-span" id="0">0</button>
-            </td>
-            <td><button class="btn-number" id=".">.</button></td>
-            <td>
-              <button class="btn-equal row-span" id="equal">=</button>
-            </td>
-          </tr>
-
-        </table>
+            <tr>
+              <td class="col-span" colspan="2">
+                <button class="btn-number" id="zero">0</button>
+              </td>
+              <td><button class="btn-number" id=".">.</button></td>
+              
+            </tr>
+          </table>
+        </div>
       </div>
+      <p>&copy;Copyright All right reserved by <span>Circle-26</span></p>
     </div>
-    <p>&copy;Copyright All right reserved by <span>Circle-26</span></p>
-  </div>
-</body>
-
+  </body>
 </html>
